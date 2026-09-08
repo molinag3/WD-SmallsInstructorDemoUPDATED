@@ -157,7 +157,6 @@ p {
 
 /* ================================================================
    MEDIA QUERIES START HERE
-   ================================================================
 ================================================================ */
 
 /* ================================================================
@@ -190,8 +189,7 @@ p {
     padding-bottom: 4rem;
   }
 
-  /* --- Feature cards: stack, then invert the color scheme.
-     This is the big one. --- */
+  /* --- Feature cards: stack, then invert the color scheme. --- */
   #Why-Smalls .row,
   #How_it_works .row,
   #say_hello .row {
@@ -216,7 +214,7 @@ p {
     width: 100%;
     max-height: 320px;
     object-fit: cover;
-    border-radius: 24px; /* desktop is 10px — a visible shape change */
+    border-radius: 24px;
   }
 
   #Why-Smalls,
@@ -286,5 +284,3 @@ p {
 
 /* MOBILE MEDIA QUERY */
 /* WRITE YOUR CODE BELOW THIS LINE */
-}
-
