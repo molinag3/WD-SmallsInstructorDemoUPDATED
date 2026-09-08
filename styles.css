@@ -9,7 +9,7 @@ html {
   max-width: 100%;
 }
 
-.navbar { 
+.navbar {
   background-color: #EEECE6;
 }
 
@@ -17,7 +17,7 @@ html {
   border: transparent;
 }
 
-.offcanvas-header, .offcanvas-body{
+.offcanvas-header, .offcanvas-body {
   background-color: #ffec65;
 }
 
@@ -155,148 +155,41 @@ p {
   padding-left: 0;
 }
 
+/* ================================================================
+   MEDIA QUERIES START HERE
+================================================================ */
+
+/* ================================================================
+   >>> INSTRUCTOR DEMO BEGINS HERE (Target time: 8 minutes) <<<
+   Everything from this line to the closing brace below is what
+   gets built live, in order.
+================================================================ */
+
 /* ================================
    TABLET MEDIA QUERY
    768px – 1024px
-   Goal: Optimize layout & UX for
-   touch-first, mid-size screens
 ================================ */
 @media (min-width: 768px) and (max-width: 1024px) {
- 
-  /* --- Hero --- */
+
+  /* --- Hero: shorter, reframed --- */
   .hero-image {
-    height: 75vh;
-    background-position: center top;
+    height: 55vh;
+    background-position: center 30%;
+    border-bottom: 8px solid #2b2b2b;
   }
- 
-  /* --- Heading --- */
+
+  /* --- Heading: a real type jump, not a nudge --- */
   h1 {
-    font-size: clamp(3rem, 6vw, 4.5rem);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    letter-spacing: -0.03em;
   }
- 
-  /* --- Section padding --- */
+
   #main {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
- 
-  #Why-Smalls .col-md-6,
-  #How_it_works .col-md-6,
-  #say_hello .col-md-6 {
-    width: 100%;
-    max-width: 100%;
-    flex: 0 0 100%;
-  }
- 
-  /* Reverse stacking order for How It Works so image stays on top */
-  #How_it_works .row {
-    flex-direction: column-reverse;
-  }
- 
-  #Why-Smalls img,
-  #How_it_works img,
-  #say_hello img {
-    width: 100%;
-    max-height: 380px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
- 
-  /* --- Description block --- */
-  .description {
-    padding: 2.5rem 2rem;
-    text-align: center;
-  }
- 
-  .description h3 {
-    font-size: 2rem;
-    margin-bottom: 1.25rem;
-  }
- 
-  .description p,
-  .description ul {
-    font-size: 1.1rem;
-    line-height: 1.75;
-    text-align: left;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-  }
- 
-  .description .btn {
-    padding: 0.75rem 2rem;
-    font-size: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
-  #gallery figure {
-    height: 260px;
-  }
- 
-  .benefits {
-    min-height: 170px;
-    padding: 1.25rem;
-    font-size: 0.95rem;
-  }
- 
-  /* --- Card rounding & spacing --- */
-  #Why-Smalls,
-  #How_it_works,
-  #say_hello {
-    border-radius: 16px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-  }
- 
-  /* --- Footer: 2-column layout on tablet --- */
-  footer .col-lg-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-bottom: 1.5rem;
-  }
- 
-  footer .col-md-4 {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
-}
- 
- 
-/* ================================
-   MOBILE MEDIA QUERY
-   Below 768px
-   Goal: Prioritize readability,
-   touch usability, single-column flow
-================================ */
-@media (max-width: 767px) {
-
-  /* --- Hero --- */
-  .hero-image {
-    height: 50vh;
-    background-position: center top;
-  }
-
-  /* --- Heading --- */
-  h1 {
-    font-size: clamp(1.75rem, 8vw, 2.75rem);
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-  }
-
-  /* --- Section padding --- */
-  #main {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  /* --- Testimonial image --- */
-  #main .container img {
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  /* --- Feature cards: full single-column stack --- */
+  /* --- Feature cards: stack, then invert the color scheme. --- */
   #Why-Smalls .row,
   #How_it_works .row,
   #say_hello .row {
@@ -319,30 +212,146 @@ p {
   #How_it_works img,
   #say_hello img {
     width: 100%;
-    max-height: 260px;
+    max-height: 320px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 24px;
   }
 
-  /* --- Card spacing --- */
   #Why-Smalls,
   #How_it_works,
   #say_hello {
-    border-radius: 12px;
-    padding: 1.25rem;
-    margin-bottom: 1.25rem;
+    background-color: #2b2b2b;
+    color: #ffec65;
+    border-radius: 24px;
+    padding: 2.5rem;
+    margin-bottom: 2.5rem;
   }
 
-  /* --- Description: tighter, centered --- */
+  .description h3 {
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .description p,
+  .description ul {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .description .btn {
+    padding: 0.85rem 2.25rem;
+    font-size: 1rem;
+    background-color: #ffec65;
+    color: #2b2b2b;
+    border: none;
+  }
+
+  #gallery .col-6,
+  #gallery .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  #gallery figure {
+    height: 280px;
+  }
+
+  .benefits {
+    min-height: 170px;
+    padding: 1.5rem;
+    font-size: 1rem;
+    background-color: #2b2b2b;
+    color: #ffec65;
+  }
+
+  /* --- Footer: two clean columns instead of four cramped ones --- */
+  footer .col-lg-6,
+  footer .col-md-4 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ================================================================
+   >>> INSTRUCTOR DEMO ENDS HERE <<<
+   Hand off to teams now — mobile is their build.
+================================================================ */
+
+/* MOBILE MEDIA QUERY */
+/* WRITE YOUR CODE BELOW THIS LINE */
+
+/* ================================================================
+   MOBILE MEDIA QUERY — SOLUTION (answer key, for grading reference)
+   max-width: 767px, so this never overlaps the tablet range above.
+   Scoped to the Reviews section per the instructions doc:
+   #Why-Smalls, #How_it_works, #say_hello, #gallery.
+================================================================ */
+@media (max-width: 767px) {
+
+  /* --- Hero: shorter still, keep subject in frame --- */
+  .hero-image {
+    height: 40vh;
+    background-position: center top;
+  }
+
+  /* --- Typography: fluid scaling, LevelUp Challenge 1 --- */
+  h1 {
+    font-size: clamp(2rem, 12vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  #main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  /* --- Feature grid: full stack, image first, then text --- */
+  #Why-Smalls .row,
+  #How_it_works .row,
+  #say_hello .row {
+    flex-direction: column;
+  }
+
+  #Why-Smalls .col-md-6,
+  #How_it_works .col-md-6,
+  #say_hello .col-md-6 {
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  #Why-Smalls img,
+  #How_it_works img,
+  #say_hello img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  #Why-Smalls,
+  #How_it_works,
+  #say_hello {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+  }
+
+  /* --- Description: single column, comfortable reading width --- */
   .description {
     padding: 1.5rem 1rem;
     text-align: center;
   }
 
   .description h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin-bottom: 1rem;
-    line-height: 1.3;
   }
 
   .description p,
@@ -352,49 +361,42 @@ p {
     text-align: left;
   }
 
-  /* --- Buttons: full-width for easy tapping --- */
-  .description .btn,
-  #gallery .btn {
+  /* Full-width, larger tap target — LevelUp Challenge 2 (accessibility) */
+  .description .btn {
     width: 100%;
-    padding: 0.875rem;
+    padding: 1rem;
     font-size: 1rem;
   }
 
-  /* --- Gallery: 2 columns on mobile --- */
-  #gallery .col-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
+  /* --- Gallery: single column, no cropped side-by-side squeeze --- */
+  #gallery .col-6,
+  #gallery .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
   #gallery figure {
-    height: 180px;
+    height: 220px;
   }
 
   .benefits {
     min-height: auto;
-    padding: 0.875rem;
-    font-size: 0.875rem;
+    padding: 1rem;
+    font-size: 0.95rem;
   }
 
-  .benefits h4 {
-    font-size: 0.9rem;
-  }
-
-  /* --- Feature col --- */
-  .feature-col {
-    padding: 0.75rem;
-  }
-
-  /* --- Footer: fully stacked --- */
+  /* --- Footer: single column, full-width tap targets --- */
   footer .col-lg-6,
   footer .col-md-4 {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 1.25rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
   }
 
-  /* --- Navbar brand size --- */
-  .navbar-brand {
-    font-size: 1.1rem;
-  }
+  /* Note for grading: this stylesheet intentionally has NO hover-only
+     interactions in the mobile block — hover doesn't exist as an input
+     on touch devices. If a team's submission relies on :hover to reveal
+     content or trigger key actions here, flag it as a UX issue, not
+     just a style nitpick. */
 }
